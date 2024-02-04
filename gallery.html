@@ -48,5 +48,11 @@ sourceImages.forEach(function(sourceImage) {
     thumbnailsContainer.appendChild(thumbnail);
 });
 </script>
+<script>
+    function showImage(imageUrl) {
+        var mainImage = document.getElementById('mainImage');
+        mainImage.src = imageUrl;
+    }
+</script>
 </body>
 </html>

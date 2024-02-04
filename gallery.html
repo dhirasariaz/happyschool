@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thumbnail Display</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    #thumbnails {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .thumbnail {
+        border: 1px solid #ccc;
+        padding: 5px;
+    }
+    .thumbnail img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+</style>
+</head>
+<body>
+<div id="thumbnails"></div>
+
+<script>
+// List of source images
+var sourceImages = [
+    'images/facilities/hostel1.jpg',
+    'images/facilities/school1.jpg'
+    // Add more source image URLs as needed
+];
+
+var thumbnailsContainer = document.getElementById('thumbnails');
+
+// Create thumbnail for each source image
+sourceImages.forEach(function(sourceImage) {
+    var thumbnail = document.createElement('div');
+    thumbnail.classList.add('thumbnail');
+    var image = document.createElement('img');
+    image.src = sourceImage;
+    thumbnail.appendChild(image);
+    thumbnailsContainer.appendChild(thumbnail);
+});
+</script>
+</body>
+</html>

@@ -44,8 +44,11 @@ sourceImages.forEach(function(sourceImage) {
     thumbnail.classList.add('thumbnail');
     var image = document.createElement('img');
     image.src = sourceImage;
+    image.addEventListener('click', function() {
+        // Create a modal or open the image in a new tab/window
+        window.open(sourceImage, '_blank');
+    });
     thumbnail.appendChild(image);
-    thumbnail.onclick(sourceImage);
     thumbnailsContainer.appendChild(thumbnail);
 });
 </script>

@@ -45,6 +45,7 @@ sourceImages.forEach(function(sourceImage) {
     var image = document.createElement('img');
     image.src = sourceImage;
     thumbnail.appendChild(image);
+    thumbnail.onclick(sourceImage);
     thumbnailsContainer.appendChild(thumbnail);
 });
 </script>
